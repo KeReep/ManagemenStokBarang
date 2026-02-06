@@ -9,7 +9,7 @@ public class Barang {
     Barang(String nama, String kode, int stok){
         this.nama = nama;
         this.kode = kode;
-        this.stok = stok;
+        setStok(stok);
     }
     
     @Override
@@ -28,7 +28,13 @@ public class Barang {
     public int getStok () {
         return stok;
     }
+
+    public void setStok(int stok){
+        if (stok < 0) this.stok = 0;
+        this.stok = stok;
+    }
     
 
 }
+
 
