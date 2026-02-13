@@ -1,6 +1,5 @@
 package storage;
 
-
 public class Barang {
     private String nama;
     private String kode;
@@ -10,11 +9,6 @@ public class Barang {
         this.nama = nama;
         this.kode = kode;
         setStok(stok);
-    }
-    
-    @Override
-    public String toString (){
-        return String.format("Nama : %-15s | Kode : %-10s | Stok : %-5s", nama, kode, stok);
     }
     
     public String getKode () {
@@ -37,8 +31,15 @@ public class Barang {
         }
         
     }
-    
 
+    public String getInfoTambahan(){
+        return "-";
+    }
+
+    @Override
+    public String toString (){
+        return String.format("%-15s | %-10s |  %-5s | %-15s", nama, kode, stok, getInfoTambahan());
+    }
 }
 
 
