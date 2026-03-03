@@ -172,16 +172,16 @@ public class DashBoardFrame extends javax.swing.JFrame {
         jTextField6.setBorder(javax.swing.BorderFactory.createTitledBorder("Low stock"));
         jTextField6.addActionListener(this::jTextField6ActionPerformed);
 
-        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder("Total Elektronik"));
+        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder("Total Makanan"));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel5.setText("List Barang");
 
-        jTextField2.setBorder(javax.swing.BorderFactory.createTitledBorder("Total Obat\n"));
+        jTextField2.setBorder(javax.swing.BorderFactory.createTitledBorder("Total Makanan"));
 
         jTextField4.setBorder(javax.swing.BorderFactory.createTitledBorder("Total Makanan"));
 
-        jTextField5.setBorder(javax.swing.BorderFactory.createTitledBorder("Total Pakaian\n"));
+        jTextField5.setBorder(javax.swing.BorderFactory.createTitledBorder("Total Makanan"));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
