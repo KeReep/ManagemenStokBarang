@@ -107,7 +107,10 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
+        btnDashboard = new javax.swing.JButton();
+        btnListBarang = new javax.swing.JButton();
         Parent = new javax.swing.JPanel();
+        panelDashboard = new javax.swing.JPanel();
         panelListBarang = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -174,37 +177,55 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel8.setText("SYSTEM");
         jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
+        btnDashboard.setBackground(new java.awt.Color(0, 102, 102));
+        btnDashboard.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnDashboard.setForeground(new java.awt.Color(250, 250, 250));
+        btnDashboard.setText("Home");
+        btnDashboard.setFocusable(false);
+        btnDashboard.addActionListener(this::btnDashboardActionPerformed);
+
+        btnListBarang.setBackground(new java.awt.Color(0, 102, 102));
+        btnListBarang.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnListBarang.setForeground(new java.awt.Color(250, 250, 250));
+        btnListBarang.setText("List Barang");
+        btnListBarang.setFocusable(false);
+        btnListBarang.addActionListener(this::btnListBarangActionPerformed);
+
         javax.swing.GroupLayout sidebarLayout = new javax.swing.GroupLayout(sidebar);
         sidebar.setLayout(sidebarLayout);
         sidebarLayout.setHorizontalGroup(
             sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sidebarLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addGap(67, 67, 67))
             .addGroup(sidebarLayout.createSequentialGroup()
                 .addGroup(sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(sidebarLayout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addGroup(sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(sidebarLayout.createSequentialGroup()
-                                .addGroup(sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, sidebarLayout.createSequentialGroup()
-                                        .addGap(11, 11, 11)
-                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(sidebarLayout.createSequentialGroup()
                         .addGap(43, 43, 43)
                         .addGroup(sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(sidebarLayout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(66, 66, 66)
+                        .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(sidebarLayout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addGroup(sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnListBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(sidebarLayout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addComponent(jLabel8))
+                    .addGroup(sidebarLayout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addComponent(jLabel2)))
                 .addContainerGap(45, Short.MAX_VALUE))
         );
         sidebarLayout.setVerticalGroup(
             sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sidebarLayout.createSequentialGroup()
-                .addGap(131, 131, 131)
+                .addGap(70, 70, 70)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7)
@@ -212,11 +233,15 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabel8)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(btnLogout)
-                .addGap(47, 47, 47)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDashboard)
+                .addGap(91, 91, 91)
+                .addComponent(btnListBarang)
+                .addGap(27, 27, 27)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(890, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnLogout)
+                .addContainerGap(851, Short.MAX_VALUE))
         );
 
         getContentPane().add(sidebar);
@@ -224,6 +249,10 @@ public class MainFrame extends javax.swing.JFrame {
 
         Parent.setBackground(new java.awt.Color(255, 255, 255));
         Parent.setLayout(new java.awt.CardLayout());
+
+        panelDashboard.setBackground(Color.WHITE);
+        panelDashboard.setLayout(null);
+        Parent.add(panelDashboard, "card3");
 
         panelListBarang.setBackground(Color.WHITE);
         panelListBarang.setLayout(null);
@@ -489,7 +518,7 @@ public class MainFrame extends javax.swing.JFrame {
                     return;
                 }
                 
-                String query = "insert into barang (nama, kode, jenis, stok, infoTambah) values (?,? ,? ,?, ?)";
+                String query = "INSERT INTO barang (nama, kode, jenis, stok, infoTambah) values (?,? ,? ,?, ?)";
                 PreparedStatement pst = con.prepareStatement(query);
                 pst.setString(1, nama);
                 pst.setString(2, kode);
@@ -642,14 +671,28 @@ public class MainFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnHapusActionPerformed
 
+    private void btnDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDashboardActionPerformed
+        Parent.removeAll();
+         
+    }//GEN-LAST:event_btnDashboardActionPerformed
+
+    private void btnListBarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListBarangActionPerformed
+        Parent.removeAll();
+        Parent.add(panelListBarang);
+        Parent.repaint();
+        Parent.revalidate();
+    }//GEN-LAST:event_btnListBarangActionPerformed
+
     public static void main(String args[]) {}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanelInput;
     private javax.swing.JPanel Parent;
     private javax.swing.JButton btnBatal;
+    private javax.swing.JButton btnDashboard;
     private javax.swing.JButton btnEdit;
     private javax.swing.JButton btnHapus;
+    private javax.swing.JButton btnListBarang;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnTambah;
     private javax.swing.JComboBox<String> cbxJenis;
@@ -676,6 +719,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JLabel lblStok;
     private javax.swing.JLabel lowStockCount;
+    private javax.swing.JPanel panelDashboard;
     private javax.swing.JPanel panelListBarang;
     private javax.swing.JPanel panelLowStok;
     private javax.swing.JPanel panelTotalItem;

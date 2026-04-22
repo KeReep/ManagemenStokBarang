@@ -15,8 +15,6 @@ public class LoginPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel10 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
         panelKiri = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -56,10 +54,6 @@ public class LoginPage extends javax.swing.JFrame {
         suConPassword = new storage.component.PasswordField();
         jLabel33 = new javax.swing.JLabel();
         btnSignIn = new storage.component.RoundedButton();
-
-        jLabel10.setText("jLabel10");
-
-        jLabel22.setText("jLabel22");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login Page");
@@ -398,12 +392,12 @@ public class LoginPage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+  
      // klik "Register" agar pindah ke panel register
     private void lblToRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblToRegisterMouseClicked
         txtUsername.setText("");
         txtPassword.setText("");
-
+        
         cBox.setSelected(false);
 
         Parent.removeAll();
@@ -501,7 +495,7 @@ public class LoginPage extends javax.swing.JFrame {
                     query = "SELECT password FROM users WHERE username=?";
                     PreparedStatement pst = con.prepareStatement(query);
                     pst.setString(1, Username);
-
+ 
                     ResultSet rs = pst.executeQuery();
 
                     if (rs.next()) {
@@ -621,7 +615,6 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JCheckBox cBox;
     private javax.swing.JCheckBox cBoxSU;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -630,7 +623,6 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
