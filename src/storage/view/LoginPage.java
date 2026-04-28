@@ -492,7 +492,7 @@ public class LoginPage extends javax.swing.JFrame {
                     Username = txtUsername.getText();
                     Password = new String(passwordChars);
 
-                    query = "SELECT password FROM users WHERE username=?";
+                    query = "SELECT password, role, status FROM users WHERE username=?";
                     PreparedStatement pst = con.prepareStatement(query);
                     pst.setString(1, Username);
  
@@ -500,11 +500,18 @@ public class LoginPage extends javax.swing.JFrame {
 
                     if (rs.next()) {
                         passDb = rs.getString("password");
+                        String role = rs.getString("role");
+                        String status = rs.getString("status");
+                        
+                        if (status.equalsIgnoreCase("Inactive")) {
+                            JOptionPane.showMessageDialog(null, "Akun kamu tidak aktif!");
+                            return;
+                        }
 
                         if (Password.equals(passDb)) {
                             
                             // login berhasil → buka MainFrame
-                            MainFrame mainFrame = new MainFrame();
+                            MainFrame mainFrame = new MainFrame(role);
                             mainFrame.setSize(1190, 710);
                             mainFrame.setLocationRelativeTo(null);
                             mainFrame.setResizable(false);
