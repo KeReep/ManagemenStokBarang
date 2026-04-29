@@ -154,7 +154,6 @@ public class MainFrame extends javax.swing.JFrame {
         btnDashboard = new javax.swing.JButton();
         btnListBarang = new javax.swing.JButton();
         btnManageUser = new javax.swing.JButton();
-        jLabel32 = new javax.swing.JLabel();
         Parent = new javax.swing.JPanel();
         panelDashboard = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
@@ -236,7 +235,6 @@ public class MainFrame extends javax.swing.JFrame {
         setTitle("Managemen Stok Barang");
         setBackground(new java.awt.Color(250, 250, 250));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setPreferredSize(new java.awt.Dimension(1200, 710));
         getContentPane().setLayout(null);
 
         sidebar.setBackground(new java.awt.Color(0, 102, 102));
@@ -303,10 +301,6 @@ public class MainFrame extends javax.swing.JFrame {
         btnManageUser.addActionListener(this::btnManageUserActionPerformed);
         sidebar.add(btnManageUser);
         btnManageUser.setBounds(60, 440, 120, 27);
-
-        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/storage/icon/icons8-truck-weight-max-loading-100.png"))); // NOI18N
-        sidebar.add(jLabel32);
-        jLabel32.setBounds(70, 30, 110, 80);
 
         getContentPane().add(sidebar);
         sidebar.setBounds(-10, 0, 248, 1275);
@@ -1373,7 +1367,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
