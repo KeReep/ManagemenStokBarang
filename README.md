@@ -24,8 +24,13 @@ Muhammad Rochman (09021282530079)
    * Klik "Add JAR/Folder"
    * Pilih semua file `.jar` di folder `lib/`
 4. Klik Apply → OK
-5. Jalankan project
+5. Buat file `db.properties` di root folder project (sejajar sama folder `src`), isi dengan:
+db.url=jdbc:postgresql://aws-1-ap-southeast-1.pooler.supabase.com:5432/postgres?sslmode=require
+db.user=postgres.wzpghelktyrmhhsppumv
+db.password=PASSWORD MINTA_KE_KETUA
+6. Jalankan project
 
 # Catatan
-
-Semua dependency berada di folder `lib/`
+- Semua dependency berada di folder `lib/`
+- File `db.properties` tidak di-push ke GitHub, setiap anggota tim wajib membuat file ini sendiri
+- Password database minta langsung ke ketua tim

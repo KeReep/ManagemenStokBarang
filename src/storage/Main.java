@@ -6,7 +6,7 @@ import javax.swing.SwingUtilities;
 public class Main {
 
     public static void main(String[] args) {
-        
+
         //Menampilkan frame loginPage
         SwingUtilities.invokeLater(() -> {
             LoginPage login = new LoginPage();

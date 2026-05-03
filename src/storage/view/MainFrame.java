@@ -159,7 +159,7 @@ public class MainFrame extends javax.swing.JFrame {
         panelDashboard = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
@@ -314,7 +314,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/storage/icon/truck.png"))); // NOI18N
         sidebar.add(jLabel32);
-        jLabel32.setBounds(70, 40, 110, 80);
+        jLabel32.setBounds(80, 40, 110, 80);
 
         getContentPane().add(sidebar);
         sidebar.setBounds(0, 0, 248, 1275);
@@ -333,9 +333,9 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Total Item");
 
-        jLabel32.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        jLabel32.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel32.setText("30");
+        jLabel40.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel40.setText("30");
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
@@ -349,7 +349,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel15)
-                    .addComponent(jLabel32)
+                    .addComponent(jLabel40)
                     .addComponent(jLabel17))
                 .addContainerGap(62, Short.MAX_VALUE))
         );
@@ -359,7 +359,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel17)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel32)
+                .addComponent(jLabel40)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel15)
                 .addContainerGap(19, Short.MAX_VALUE))
@@ -1466,6 +1466,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
