@@ -154,6 +154,7 @@ public class MainFrame extends javax.swing.JFrame {
         btnDashboard = new javax.swing.JButton();
         btnListBarang = new javax.swing.JButton();
         btnManageUser = new javax.swing.JButton();
+        jLabel32 = new javax.swing.JLabel();
         Parent = new javax.swing.JPanel();
         panelDashboard = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
@@ -247,7 +248,7 @@ public class MainFrame extends javax.swing.JFrame {
         btnLogout.setFocusable(false);
         btnLogout.addActionListener(this::btnLogoutActionPerformed);
         sidebar.add(btnLogout);
-        btnLogout.setBounds(60, 380, 120, 27);
+        btnLogout.setBounds(60, 560, 120, 27);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -300,10 +301,14 @@ public class MainFrame extends javax.swing.JFrame {
         btnManageUser.setFocusable(false);
         btnManageUser.addActionListener(this::btnManageUserActionPerformed);
         sidebar.add(btnManageUser);
-        btnManageUser.setBounds(60, 440, 120, 27);
+        btnManageUser.setBounds(60, 380, 120, 27);
+
+        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/storage/icon/truck.png"))); // NOI18N
+        sidebar.add(jLabel32);
+        jLabel32.setBounds(70, 40, 110, 80);
 
         getContentPane().add(sidebar);
-        sidebar.setBounds(-10, 0, 248, 1275);
+        sidebar.setBounds(0, 0, 248, 1275);
 
         Parent.setBackground(new java.awt.Color(255, 255, 255));
         Parent.setLayout(new java.awt.CardLayout());
@@ -1367,6 +1372,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
