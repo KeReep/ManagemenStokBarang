@@ -3,6 +3,7 @@ package storage.view;
 import java.awt.Color;
 import java.sql.*;
 import javax.swing.JOptionPane;
+import storage.component.DBConnection;
 
 // halaman login & register
 public class LoginPage extends javax.swing.JFrame {
@@ -469,14 +470,9 @@ public class LoginPage extends javax.swing.JFrame {
     // proses login — cek username & password ke DB
     private void btnSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignInActionPerformed
         String Username, Password, passDb = null, query;
-        String SUrl, SUser, SPass;
-        SUrl = "jdbc:mysql://localhost:3306/java_user_database";
-        SUser = "root";
-        SPass = "";
 
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            try (Connection con = DriverManager.getConnection(SUrl, SUser, SPass)) {
+            try (Connection con = DBConnection.getConnection()) {
                 String username = txtUsername.getText().trim();
                 char[] passwordChars = txtPassword.getPassword();
 
@@ -526,7 +522,7 @@ public class LoginPage extends javax.swing.JFrame {
                     }
                 }
             }
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
           
@@ -535,10 +531,6 @@ public class LoginPage extends javax.swing.JFrame {
     // proses register — validasi input lalu simpan ke DB
     private void btnSignInActionPerformed1(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignInActionPerformed1
         String Username, Password, conPassword, Email;
-        String SUrl, SUser, SPass;
-        SUrl = "jdbc:mysql://localhost:3306/java_user_database";
-        SUser = "root";
-        SPass = "";
         
         Username = suUsername.getText();
         Email = suEmail.getText();
@@ -562,8 +554,7 @@ public class LoginPage extends javax.swing.JFrame {
             suConPassword.setText("");
         } else {
             try {
-                Class.forName("com.mysql.cj.jdbc.Driver");
-                try (Connection con = DriverManager.getConnection(SUrl, SUser, SPass)) {
+                try (Connection con = DBConnection.getConnection()) {
                     // cek duplikat username atau email
                     String checkQuery = "SELECT * FROM users WHERE username =? OR email=?";
                     PreparedStatement pst = con.prepareStatement(checkQuery);
@@ -601,7 +592,7 @@ public class LoginPage extends javax.swing.JFrame {
                         
                     }
                 }
-            } catch (ClassNotFoundException | SQLException e) {
+            } catch (Exception e) {
                 JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
