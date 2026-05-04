@@ -137,7 +137,6 @@ public class MainFrame extends javax.swing.JFrame {
             login.setResizable(false);
             login.setVisible(true);
             this.dispose();
-            
         }
     }//GEN-LAST:event_btnLogoutActionPerformed
 
